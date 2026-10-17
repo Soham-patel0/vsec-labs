@@ -1,0 +1,58 @@
+newman
+
+VSEC Student API
+
+→ 01 Create student
+  POST http://localhost:4000/api/students [201 Created, 471B, 65ms]
+  √  Expected HTTP 201
+
+→ 02 List students
+  GET http://localhost:4000/api/students [200 OK, 418B, 12ms]
+  √  Expected HTTP 200
+  √  Array response
+
+→ 03 Read student
+  GET http://localhost:4000/api/students/6ad32a7d8be5e9df359b06f1 [200 OK, 416B, 6ms]
+  √  Expected HTTP 200
+  √  Correct student
+
+→ 04 Update marks
+  PATCH http://localhost:4000/api/students/6ad32a7d8be5e9df359b06f1 [200 OK, 416B, 8ms]
+  √  Expected HTTP 200
+  √  Marks updated
+
+→ 05 Invalid marks
+  PATCH http://localhost:4000/api/students/6ad32a7d8be5e9df359b06f1 [400 Bad Request, 274B, 3ms]
+  √  Expected HTTP 400
+
+→ 06 Invalid ID
+  GET http://localhost:4000/api/students/not-an-id [400 Bad Request, 252B, 4ms]
+  √  Expected HTTP 400
+
+→ 07 Delete student
+  DELETE http://localhost:4000/api/students/6ad32a7d8be5e9df359b06f1 [204 No Content, 111B, 5ms]
+  √  Expected HTTP 204
+
+→ 08 Verify deletion
+  GET http://localhost:4000/api/students/6ad32a7d8be5e9df359b06f1 [404 Not Found, 249B, 4ms]
+  √  Expected HTTP 404
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │                8 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │                8 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │               11 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 779ms                                     │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 928B (approx)                            │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 13ms [min: 3ms, max: 65ms, s.d.: 19ms] │
+└───────────────────────────────────────────────────────────────┘

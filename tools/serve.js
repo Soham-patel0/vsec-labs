@@ -9,7 +9,14 @@ const types = {
 };
 http.createServer(async (req, res) => {
     try {
-        const path = resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
+        let pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+        // Serve React production output under the same menu as the static labs.
+        pathname = pathname.replace(/^\/(assign_0[67])(?=\/|$)/, '/$1/dist');
+        if (pathname.split('/').some(part => part.startsWith('.'))) {
+            res.writeHead(403).end();
+            return;
+        }
+        const path = resolve(root, '.' + pathname);
         if (path !== root && !path.startsWith(root + sep)) {
             res.writeHead(403).end();
             return;

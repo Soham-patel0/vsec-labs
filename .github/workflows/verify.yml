@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: npm install
+      - run: npm ci
       - run: npm test
       - run: npm run build
       - run: cp assign_08/.env.example assign_08/.env

@@ -20,6 +20,8 @@ Start MongoDB and the API, run the Postman collection in order, inspect CRUD res
 
 ## Windows setup
 
+The prepared local Windows copy includes an ignored MongoDB binary and a launcher. From the repository root run `npm run demo:api` to start real MongoDB plus Express together. Stop with Ctrl+C. Database files remain in the ignored `.local/db` folder. This launcher was tested locally; the binary/database are not uploaded to GitHub. On a fresh clone, install MongoDB or set `MONGOD_BINARY` to an existing mongod executable. Do not run this launcher at the same time as another MongoDB service using port 27017. The standard service setup follows below.
+
 1. Install MongoDB Community Server using the [official Windows guide](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/). Choose the Windows service option. Compass is optional. Ensure the MongoDB service is running in Windows Services.
 2. Install the [Postman desktop app](https://www.postman.com/downloads/).
 3. In the repository root run `npm install`. Then create your local configuration:

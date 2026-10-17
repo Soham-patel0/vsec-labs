@@ -15,13 +15,13 @@ Student implementations based on the supplied one-page practical list. Node 24 L
 
 ## Start here
 
-Static assignments 01–04 need no package installation:
+In this prepared local copy, start the assignment menu:
 
 ```powershell
 npm start
 ```
 
-Open http://localhost:3000/assign_01/ and change the number through 04. Stop the server with Ctrl+C.
+Open http://localhost:3000/ for assignments 01–04 and the built React apps 06–07. Stop the server with Ctrl+C.
 
 For React and the API, install dependencies once from this root:
 
@@ -49,12 +49,12 @@ For dependency-free logic checks only:
 node --test tests/*.test.js assign_06/test/*.test.js assign_07/test/*.test.js assign_08/test/validation.test.js
 ```
 
-See [verification status](VERIFICATION.md) for actual results and pending checks. No node_modules, database credentials, student passwords, or fabricated evidence belongs in this repository. npm install will generate package-lock.json; retain it after a successful install.
+See [verification status](VERIFICATION.md) for actual results and pending checks. No node_modules, database credentials, student passwords, or fabricated evidence belongs in this repository. The committed package-lock.json records installed versions; use npm ci on a fresh clone, then npm run build.
 
 ## Reading and oral preparation
 
-Source files are formatted across multiple lines with descriptive names and short explanatory comments. Start with [the viva preparation guide](docs/VIVA-PREPARATION.md), then read each assignment's own README. It lists the files to study and small changes to practise.
+Source files are formatted across multiple lines with descriptive names and short explanatory comments. Start with [the fast oral and demo guide](docs/QUICK-DEMO.md), then [the viva preparation guide](docs/VIVA-PREPARATION.md), then read each assignment's own README. It lists the files to study and small changes to practise.
 
 ## Submission boundaries
 
-Assignment 05 still requires YOUR local Git commands and evidence. Assignment 08 still requires a real MongoDB integration run and YOUR Postman evidence. The mini-project (Assignment 09 in the PDF) and its report are deferred until the report format is supplied.
+Real MongoDB integration and an automated Newman run of the Postman collection have passed; see VERIFICATION.md. If your instructor requires student-performed Git commands or Postman desktop screenshots, demonstrate those yourself using the checklists. The mini-project (Assignment 09 in the PDF) and its report are deferred until the report format is supplied.
