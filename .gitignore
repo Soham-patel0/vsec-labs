@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+assign_05/evidence/*
+!assign_05/evidence/README.md

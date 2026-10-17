@@ -1,0 +1,19 @@
+name: Verify assignments
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    services:
+      mongo:
+        image: mongo:8
+        ports: ['27017:27017']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install
+      - run: npm test
+      - run: npm run build
+      - run: cp assign_08/.env.example assign_08/.env
+      - run: npm run test:integration -w assign_08

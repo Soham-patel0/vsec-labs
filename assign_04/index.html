@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <p>VSEC LAB / 04</p>
+      <h1>Employee Registration</h1>
+    </header>
+    <main id="main">
+      <p>Client-side validation demonstration. Passwords are never stored or displayed.</p>
+      <form novalidate>
+        <label>Full name<input name="name" type="text" required autocomplete="name" maxlength="80">
+        </label>
+        <label>Email<input name="email" type="email" required autocomplete="email">
+        </label>
+        <label>Password<input name="password" type="password" required autocomplete="new-password" minlength="8" maxlength="128">
+        </label>
+        <small>Use uppercase, lowercase and a digit; at least 8 characters.</small>
+        <label>Phone (10 digits)<input name="phone" type="tel" required inputmode="numeric" maxlength="10" autocomplete="tel">
+        </label>
+        <label>Department<select name="department" required>
+          <option value="">Choose department</option>
+          <option>Computer Engineering</option>
+          <option>IT</option>
+          <option>Mechanical</option>
+          <option>Civil</option>
+        </select>
+      </label>
+      <button>Register employee</button>
+      <p id="message" role="status">
+      </p>
+    </form>
+  </main>
+  <footer>VSEC practical • Student learning demonstration</footer>
+  <script type="module" src="app.js">
+  </script>
+</body>
+</html>

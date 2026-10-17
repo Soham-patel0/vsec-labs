@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Campus Workshop Desk</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <p>VSEC LAB / 02</p>
+      <h1>Campus Workshop Desk</h1>
+    </header>
+    <main id="main">
+      <nav aria-label="Page sections">
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+      </nav>
+      <section id="schedule">
+        <h2>Workshop schedule</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>Weekly practical sessions</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Topic</th>
+                <th scope="col">Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Monday</th>
+                <td>HTML and CSS</td>
+                <td>10:00 AM</td>
+              </tr>
+              <tr>
+                <th scope="row">Wednesday</th>
+                <td>JavaScript</td>
+                <td>11:00 AM</td>
+              </tr>
+              <tr>
+                <th scope="row">Friday</th>
+                <td>React</td>
+                <td>2:00 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="register">
+        <h2>Register interest</h2>
+        <p>Demonstration form: no information is sent to a server.</p>
+        <form>
+          <label>Full name<input name="name" type="text" required maxlength="80">
+          </label>
+          <label>Email<input name="email" type="email" required >
+          </label>
+          <label>Workshop<select name="workshop">
+            <option>HTML and CSS</option>
+            <option>JavaScript</option>
+            <option>React</option>
+          </select>
+        </label>
+        <button>Register</button>
+        <p id="message" role="status">
+        </p>
+      </form>
+    </section>
+  </main>
+  <footer>VSEC practical • Student learning demonstration</footer>
+  <script type="module" src="app.js">
+  </script>
+</body>
+</html>
