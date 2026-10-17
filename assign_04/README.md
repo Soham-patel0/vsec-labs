@@ -4,14 +4,10 @@
 
 From the repository root run `npm start`, then open `http://localhost:3000/assign_04/`. No dependencies are needed for these static pages. Keep this terminal running.
 
-## Viva: explain the implementation
+## Implementation
 
 1. Validation separates business rules from DOM interaction. Errors are shown next to fields, linked by aria-describedby, and the first invalid input receives focus.
 
 2. The password rule requires 8–128 characters with uppercase, lowercase and a digit. The phone rule accepts exactly ten digits; department must match the allowed list.
 
 3. Client-side validation improves feedback but a real backend must repeat validation. This demonstration never stores or prints passwords and creates no real employee account.
-
-## Demonstration checklist
-
-Submit empty fields, invalid email, weak password, short phone and no department. Correct them and verify success without showing or storing the password.

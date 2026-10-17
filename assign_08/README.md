@@ -4,7 +4,7 @@
 
 See the MongoDB and Postman setup below.
 
-## Viva: explain the implementation
+## Implementation
 
 1. Express routes map HTTP methods and paths to operations. POST creates (201), GET reads (200), PATCH partially updates (200), and DELETE removes (204).
 
@@ -13,10 +13,6 @@ See the MongoDB and Postman setup below.
 3. 400 means invalid input, 404 means missing resource, 409 means duplicate roll number, and 500 is an unexpected server failure. Input allowlisting rejects MongoDB operators supplied as fields.
 
 4. The production server uses MongoDB. Route unit tests explicitly mock the model; the integration test checks actual database persistence. Postman exercises the HTTP API separately.
-
-## Demonstration checklist
-
-Start MongoDB and the API, run the Postman collection in order, inspect CRUD responses and capture your actual run. Run the separate database integration test.
 
 ## Windows setup
 
@@ -49,7 +45,7 @@ Create JSON: `{"name":"Soham Patel","rollNumber":"01","department":"IT","marks":
 
 ## Postman
 
-Import `postman/Student-API.postman_collection.json`. The collection variable baseUrl defaults to http://localhost:4000. Run all eight requests sequentially with Collection Runner. The create request saves studentId automatically; subsequent requests read, update, validate and delete that student. The final GET must return 404. Capture the actual Runner summary and responses yourself. Do not claim the collection was run until you run it.
+Import `postman/Student-API.postman_collection.json`. The collection variable baseUrl defaults to http://localhost:4000. Run all eight requests sequentially with Collection Runner. The create request saves studentId automatically; subsequent requests read, update, validate and delete that student. The final GET must return 404.
 
 ## Tests
 
